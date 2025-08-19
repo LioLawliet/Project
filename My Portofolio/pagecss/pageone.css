@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-navbar {
+    height: 6vh;
+    background-color: rgb(22, 22, 22);
+    
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.3);
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* brand ke kiri, menu ke kanan */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+  
+
+.brand {
+    padding-left: 80px;
+}
+
+.lio {
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    font-size: 30px;
+    cursor: default;
+}
+
+.menu {
+    gap: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    padding-right: 100px;    
+}
+
+.nav-home,
+.nav-about,
+.nav-project,
+.nav-contact {
+    font-size: 25px;
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+
+    position: relative;
+    display: inline block;
+}
+
+.nav-home::after,
+.nav-about::after,
+.nav-project::after,
+.nav-contact::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-home:hover::after,
+.nav-about:hover::after,
+.nav-project:hover::after,  
+.nav-contact:hover::after {
+    transform: scaleX(1);
+}
+
+/* background start */
+
+.container-home {
+    height: 94vh;
+}
+
+body {
+    background: linear-gradient(to bottom, #0a141a, #16242c, #1b2f3a);
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* utk section lanjutan , matikan overflow y ,nyalakan overflow x */
+}
+  
+.star0 {
+    height: 1px;
+    width: 1px;
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+
+}
+  
+.star1 {
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+}
+  
+.star2 {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+}
+  
+.star3 {
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+}
+
+#universe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* background end */
+  
+#home {
+    scroll-margin-top: 6vh;
+}  
+
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    gap: 400px;
+    
+}
+
+/* image start */
+
+.yogiri {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+    border: 5px solid rgb(255, 249, 132);
+    box-shadow: 0px -1px 18px 6px rgba(235,255,0,0.75);
+    -webkit-box-shadow: 0px -1px 18px 6px rgba(235,255,0,0.75);
+    -moz-box-shadow: 0px -1px 18px 6px rgba(235,255,0,0.75);
+    
+    cursor: default;
+    transition: 0.6s;
+    z-index: 3;
+
+    transition: 0.6s;
+}
+
+.yogiri:hover {
+    transform: scale(1.05);
+    animation: spin 2s infinite;
+}
+@keyframes spin {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+
+
+/* image end */
+/* Text start */
+
+h1 {
+    color: white;
+    font-family: monospace;
+}
+
+.container-welcome {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    gap: 10px;
+
+    background: rgba(255, 255, 255, 0.04); /* transparan putih */
+    backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* buat Safari */
+
+    padding: 40px 40px 40px 10px;
+    border-radius: 40px;
+
+    position: relative;
+
+}
+
+.sapa {
+    font-size: 25px;
+    color: rgb(253, 207, 253);
+    margin-bottom: -10px;
+}
+
+.world {
+    color:rgb(99, 171, 216);
+    text-shadow: 1px 1px 5px rgba(135, 206, 250, 0.6);
+}
+
+
+.name {
+    font-size: 65px;
+    background: linear-gradient(to bottom right, #7f00ff, #e0e0ff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    display: block;
+    min-width: 12ch;
+    min-height: 80px; /* Tambahin ini */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cursor {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-left: -5px;
+    position: absolute;
+}
+
+
+
+.carrer {
+    font-size: 30px;
+    background: linear-gradient(to right, #f4f9df, #feee61, #ffae00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: 1s;
+}
+
+
+.welcome {
+    font-size: 20px;
+    color: pink;
+}
+
+h1 {
+    text-shadow: 1px 1px 5px rgba(255,255,255,0.6);
+}
+
+.media {
+    margin-top: 20px;
+    margin-left: 5px;
+    gap: 35px;
+
+    display: flex;
+}
+
+.dc, .wa, .ig, .tt {
+    cursor: pointer;
+    color: white;
+}
+
+.dc:hover, .wa:hover, .ig:hover, .tt:hover {
+    animation: fa-bounce 1s infinite;
+}
+
+.dc:hover {color: #5865F2;}
+.wa:hover {color: #9b59b6}
+.ig:hover {color: #E1306C;}
+.tt:hover {color: #25F4EE;}
+
+
+/* Text end */
+
+
+

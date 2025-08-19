@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,p {
+    font-family: monospace;
+}
+
+.body-container {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to bottom, #0a141a, #132029, #1b2f3a, #0a141a);
+
+}
+
+.maincontainer {
+    height: 98vh;
+    width: 1500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Back to previous page */
+
+.container1 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+
+.back {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+
+    margin-left: 20px;
+    color: white;
+
+    text-decoration: none;
+}
+
+.back:hover {
+    background-color: rgb(65, 58, 139);
+    backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* buat Safari */
+    
+    transition: 0.5s;
+}
+
+.container2 {
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.image-section {
+    width: 50%;
+    height: 430px;
+    border-radius: 20px;
+    
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    z-index: 4;
+
+    backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* buat Safari */
+}
+
+.detail-image {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+    border-radius: 20px;
+    transform: scale(1.01);
+    transition: 0.3s;
+
+    z-index: 3;
+}
+
+.detail-image:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.box-section {
+    width: 50%;
+    height: 430px;
+    border-radius: 20px;
+    
+}
+
+.desc-section {
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 20px;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: -10px;
+
+    color: #ffffff;
+}
+
+.language {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.language h1 {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.used-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #dedede;
+}
+
+.bahasa {
+    background-color:	rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* buat Safari */
+    
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+
+    color: white;
+}
+
+.descript {
+    width: 700px;
+    font-size: 18px;
+    margin-top: -10px;
+    opacity: 0.8;
+
+    color: #ffffff;
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 200px;
+    background-color: rgb(104, 93, 231);
+    border-radius: 10px;
+    gap: 10px;
+    
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 999;
+
+   position: relative;
+   overflow: hidden;
+}
+
+.github::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 50px;
+    background: dodgerblue;
+    transition: width 0.7s ease; /* animasi */
+    border-radius: 10px;
+}
+
+.github:hover::after {
+    width: 100%;
+}
+
+.github h1 {
+    font-weight: 300;
+    color: white;
+    font-size: 20px;
+
+    z-index: 999;
+}
+
+.github i {
+    z-index: 999;
+}
+
+.github:active {
+    transform: translateY(5px);
+    transition: 0.3s;
+}
+
+.container3 {
+    height: 350px;
+    width: 100%;
+
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.feature-section {
+    background-color:	rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* buat Safari */
+
+    width: calc(50% - 5px);
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    gap: 15px;
+
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.08);
+}
+
+.feature-section h1 {
+    margin-left: 40px;
+    color: #dedede;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    margin-left: 40px;
+}
+
+.feature-list li{
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0.7;
+    
+    color: white;
+}
+
+.feature-list li::marker {
+    color: rgb(192, 177, 255);
+    opacity: 1;
+}
+
+
+
+.chalenge-section {
+    background-color:	rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* buat Safari */
+
+    width: 50%;
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 10px;
+    gap: 20px;
+
+    border: 3px solid rgba(255, 255, 255, 0.08);
+}
+
+.chalenge-section h1 {
+    color: white;
+    margin-left: 40px;
+}
+
+.chalenge-section li{
+    color: white;
+    width: 600px;
+    font-size: 18px;
+    opacity: 0.8;
+
+    margin-left: 40px;
+    font-family: monospace;
+}
+
+.chalenge-section li::marker {
+    color: rgb(192, 177, 255);
+}
+
+.chalenge,.solution {
+    height: 100px;
+    gap: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+

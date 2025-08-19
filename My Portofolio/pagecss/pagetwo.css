@@ -1,0 +1,160 @@
+/* #about {
+    background: linear-gradient(to bottom, #1b2f3a, #202f39, #273a45);
+
+    z-index: -1;
+} */
+
+.container-about {
+    height: 94vh;
+}
+
+.position-about {
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#about {
+    scroll-margin-top: 6vh;
+    /*stop di bagian paling awal saat di click*/
+}
+
+
+.card {
+    width: 90%;
+    height: 450px;
+    background: linear-gradient(to bottom, #262626, #141414);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 20px;
+    gap: 100px;
+
+    margin-top: 70px;
+    border: 1px solid white;
+    box-shadow: rgba(36, 131, 255, 0.3) 0px 10px 20px 0px;
+    z-index: 1;
+}
+
+.img-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 250px;
+
+    border: 5px solid rgb(180, 132, 255);
+    box-shadow: 0px -1px 18px 6px rgba(180, 132, 255, 0.75);
+    -webkit-box-shadow: 0px -1px 18px 6px rgba(180, 132, 255, 0.75);
+    -moz-box-shadow: 0px -1px 18px 6px rgba(180, 132, 255, 0.75);
+}
+
+.card-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.card-image:hover  {
+    transform: scale(1.3);
+    transition: 0.3s;
+}   
+
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    height: 500px;
+    width: auto;
+    margin-right: 150px;
+}
+
+.desc-text {
+    height: 200px;
+    max-width: 800px;
+    font-size: 23px;
+    text-align: center;
+    font-family: monospace;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to right, #bb86fc, #d9b3ff, #f3e8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 1px 1px 7px rgba(255, 255, 255, 0.6);
+}
+
+.skill {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.skill-text {
+    font-size: 30px;
+    font-family: 'Michroma', sans-serif;
+    letter-spacing:5px;
+}
+
+.program {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+    gap: 100px;
+}
+
+.container-program {
+    background: linear-gradient(to right, #131313, #2b1a38);
+    
+    width: 300px;
+    height: 100px;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    border: 1px solid white;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px 0px inset;
+    transition: 0.3s;
+
+    cursor: default;
+    z-index: 9;
+}
+
+.container-program:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: rgb(231, 221, 241) 0px 55px 25px -25px inset;
+}
+
+.html,.css,.js,.py {
+    margin-left: 40px;
+}
+
+.language {
+    font-size: 20px;
+    font-family: 'Michroma', sans-serif;
+    display: flex;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+    background: linear-gradient(to right, #dfe9f3, #ffffff); /* biru soft ke putih */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
