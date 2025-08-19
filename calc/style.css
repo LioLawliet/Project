@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: linear-gradient(160deg, #ffffff 0%, #dbe3eb 50%, #c9dbef 100%);
+    height: 100vh;
+    transition: 1s;
+}
+
+/* darkmode */
+
+body.dark {
+    background: linear-gradient(160deg, #121212 0%, #2e2e41 50%, #42426d 100%);
+    transition: 1s;
+
+}
+
+body.dark .calculator {
+    background: linear-gradient(130deg, #0d063d 0%, #493084 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: 1s;
+
+    box-shadow: 7px 11px 16px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 7px 11px 16px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 11px 16px 3px rgba(0, 0, 0, 0.75);
+}
+
+body.dark .screen {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+body.dark button {
+    background-color: #dddddd;
+    color: #000000;
+
+}
+
+body.dark .plus,
+body.dark .mines,
+body.dark .times,
+body.dark .divided {
+    background-color: #3c29b7;
+    color: #ffffff;
+}
+
+body.dark .plus:hover,
+body.dark .mines:hover,
+body.dark .times:hover,
+body.dark .divided:hover {
+    background-color: #a29bfe;
+    transform: scale(1.05);
+    color: black;
+
+}
+
+body.dark .reset {
+    background-color: #3c29b7;
+    color: white;
+
+}
+
+body.dark .reset:hover {
+    background-color: #a29bfe;
+    color: black;
+    transform: scale(1.05);
+}
+
+body.dark .one:hover {
+    background-color: #ff4d6d;
+    transition: 0.6s;
+}
+
+/* neon pink */
+body.dark .two:hover {
+    background-color: #ff884d;
+    transition: 0.6s;
+}
+
+/* neon orange */
+body.dark .three:hover {
+    background-color: #ffd93d;
+    transition: 0.6s;
+}
+
+/* neon yellow */
+body.dark .four:hover {
+    background-color: #32ff7e;
+    transition: 0.6s;
+}
+
+/* neon green */
+body.dark .five:hover {
+    background-color: #18dcff;
+    transition: 0.6s;
+}
+
+/* neon cyan */
+body.dark .six:hover {
+    background-color: #7d5fff;
+    transition: 0.6s;
+}
+
+/* neon purple */
+body.dark .seven:hover {
+    background-color: #c56cf0;
+    transition: 0.6s;
+}
+
+/* lavender neon */
+body.dark .eight:hover {
+    background-color: #3ae374;
+    transition: 0.6s;
+}
+
+/* hijau stabilo */
+body.dark .nine:hover {
+    background-color: #f368e0;
+    transition: 0.6s;
+}
+
+/* pink violet */
+body.dark .zero:hover {
+    background-color: #ff9ff3;
+    transition: 0.6s;
+}
+
+/* pink muda neon */
+body.dark .dot:hover {
+    background-color: #8395ff;
+    transition: 0.6s;
+}
+
+/* biru lembut neon */
+body.dark .equal:hover {
+    background-color: rgb(39, 39, 43);
+    transition: 0.6s;
+    color: white;
+}
+
+
+/* darkmode end */
+/* navbar start */
+
+.container-navbar {
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #fff700, #ff7b00);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background: linear-gradient(to right, #4e54c8, #2b2b5c);
+}
+
+input:checked+.slider::before {
+    transform: translateX(46px);
+
+}
+
+/* navbar end */
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+
+.running-text {
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    font-weight: bold;
+    color: rgba(0, 0, 0,0.5); /* transparan biar gak ganggu */
+    white-space: nowrap;
+    z-index: 0; /* di belakang */
+    animation: jalan 10s linear infinite;
+    pointer-events: none; /* biar gak ganggu klik */
+    font-family:'Michroma' ,sans-serif;
+    font-size: 90px;
+}
+
+body.dark .running-text {
+    color: rgba(255, 255, 255, 0.5); /* transparan biar gak ganggu */
+    font-family: 'Rubik Glitch Pop',sans-serif;
+    letter-spacing: 10px;
+    font-size: 100px;
+}
+
+@keyframes jalan {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+
+
+
+.calculator {
+    background: #eae3ff;
+    background: linear-gradient(90deg, #eae3ff 0%, #ffffff 80%);
+    background: -webkit-linear-gradient(90deg, #eae3ff 0%, #ffffff 80%);
+    background: -moz-linear-gradient(90deg, #eae3ff 0%, #ffffff 80%);
+
+    display: grid;
+    justify-content: center;
+
+    max-width: 322px;
+
+    padding-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    box-shadow: 16px 11px 9px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 16px 11px 9px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 16px 11px 9px 2px rgba(0, 0, 0, 0.75);
+
+    z-index: 999;
+}
+
+.screen {
+
+    background-color: black;
+    padding: 15px;
+    border-radius: 20px;
+
+    margin-bottom: 10px;
+    color: white;
+
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-family: monospace;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 280px;
+    flex-shrink: 1;
+
+
+}
+
+
+.baris-1,
+.baris-2,
+.baris-3,
+.baris-4 {
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 2px;
+    width: 70px;
+    height: 70px;
+
+    border-radius: 15px;
+    border: none;
+
+    background-color: rgb(31, 30, 34);
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+
+    box-shadow: rgba(0, 0, 0, 0.8) 4px 4px 10px 0px;
+
+}
+
+.baris-5 {
+    display: flex;
+    justify-content: center;
+}
+
+.reset {
+    width: 100%;
+    /* biar full parent */
+    max-width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(82, 70, 124);
+
+    letter-spacing: 1px;
+    font-size: 30px;
+
+    font-family: monospace;
+    font-style: italic;
+    cursor: pointer;
+    transition: 0.3s;
+
+    margin-top: 8px;
+
+}
+
+.reset:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    background-color: rgb(226, 224, 234);
+    color: rgb(0, 0, 0);
+    box-shadow: none;
+    margin-top: 10px;
+}
+
+
+.plus,
+.mines,
+.times,
+.divided {
+    background-color: rgb(82, 70, 124);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.plus:hover,
+.mines:hover,
+.times:hover,
+.divided:hover {
+    background-color: rgb(141, 124, 205);
+    transition: 0.4s;
+    transform: scale(1.05);
+    animation: fa-bounce 1s infinite;
+    box-shadow: none;
+}
+
+.equal {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.equal:hover {
+    animation: fa-spin 1s infinite;
+    background-color: rgb(249, 247, 254);
+    color: black;
+    transition: 0.8s;
+    box-shadow: none;
+
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.zero,
+.dot {
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover,
+.five:hover,
+.six:hover,
+.seven:hover,
+.eight:hover,
+.nine:hover,
+.zero:hover,
+.dot:hover {
+    animation: fa-spin 1s infinite reverse;
+    box-shadow: none;
+}
+
+.one:hover {
+    background-color: #e07d7d;
+    transition: 0.6s;
+}
+
+.two:hover {
+    background-color: #e6a96d;
+    transition: 0.6s;
+}
+
+.three:hover {
+    background-color: #a97d4f;
+    transition: 0.6s;
+}
+
+.four:hover {
+    background-color: #8fe1b0;
+    transition: 0.6s;
+}
+
+.five:hover {
+    background-color: #80d0f0;
+    transition: 0.6s;
+}
+
+.six:hover {
+    background-color: #96a3ee;
+    transition: 0.6s;
+}
+
+.seven:hover {
+    background-color: #b998f0;
+    transition: 0.6s;
+}
+
+.eight:hover {
+    background-color: #dfa0e0;
+    transition: 0.6s;
+}
+
+.nine:hover {
+    background-color: #bcbcbc;
+    transition: 0.6s;
+}
+
+.zero:hover {
+    background-color: #91d7bb;
+    transition: 0.6s;
+}
+
+.dot:hover {
+    background-color: #d0d0d0;
+    transition: 0.6s;
+}
+
+
