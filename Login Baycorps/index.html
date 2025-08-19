@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baycorps-login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+<body>
+
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4"></div>
+
+    <div class="container">
+        <div class="container-navbar">
+            <img src="assets/ygir.jpg" alt="" class="profile bx-tada">
+            <button class="button" onclick="changebg()">Change Background</button>
+        </div>
+        <div class="login">
+            <div class="img">
+                <img src="logo.png" alt="" class="image">
+            </div>
+
+            <h1 class="name">Baycorps</h1>
+
+            <div class="username">
+                <h1 class="text-username">Username:</h1>
+
+                <input type="text" class="input-username" placeholder="Enter your username" onkeydown="changetopw(event)">
+            </div>
+
+            <div class="password" style="position: relative;">
+                <h1 class="text-password">Password:</h1>
+
+                <input type="password" class="input-password" placeholder="Enter your password" onkeydown="changetouser(event)" oninput="checkpassword()">
+
+                <i class="fa-solid fa-eye toogle-password" onclick="tooglepassword()"></i>
+            </div>
+
+            <div class="forgot">
+                <h1 class="forgot-password">forgot password?</h1>
+            </div>
+
+            <div class="submit">
+                <input type="submit" class="submit-button" value="Login" onclick="data()">
+            </div>
+
+            <div class="social-media">
+
+                <div class="apple"><i class="fa-brands fa-apple fa-2x my-apple"></i></div>
+                <div class="facebook"><i class="fa-brands fa-facebook fa-2x my-facebook"></i></div>
+                <div class="google"><i class="fa-brands fa-google fa-2x my-google"></i></div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+</body>
+
+</html>
